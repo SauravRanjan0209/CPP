@@ -1,4 +1,5 @@
 #include<iostream>
+#include <climits>  
 using namespace std;
 
 //how to  intialize array:-
@@ -18,5 +19,22 @@ using namespace std;
 //address of index = arr + index*(sizeOfDatatype)
 int main(){
 
+int arr[10]={1,50,5,4,78,96,48,25,36,5};
+    int ans = INT_MAX;
+    //Min value
+    for(int i=0;i<10;i++){
+        if(arr[i]<ans)
+            ans=arr[i];
+   } 
+    cout<<ans<<endl;
 
+    //Max value
+    int maxAns=INT_MIN;
+    for(int i=0;i<10;i++){
+        if(arr[i]>maxAns){
+            maxAns = arr[i];
+        }
+        cout<<maxAns;
+    }
+    return 0;
 }
